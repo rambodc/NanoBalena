@@ -1,0 +1,23 @@
+1- open command line terminal from windows and open required path for development 
+1- download the repo for gcp testing from https://github.com/balena-io-examples/google-iot using command:  "git clone https://github.com/balena-io-examples/google-iot"
+2- open it in vs using command: "cd ."
+by following the doc : https://www.balena.io/docs/learn/develop/integrations/google-iot/ i can't ran npm run gcp-setup (may be it support linux terminal), it run it from second option ./scripts/gcp-setup.sh 
+3-After installing gcp-setup countered issue on pushing image to balena :
+[main]     manifest for balenalib/jetson-nano-2gb-devkit-alpine-node:11-build not found: manifest unknown: manifest unknown
+[Error]    Some services failed to build:
+[Error]      Service: main
+[Error]        Error: manifest for balenalib/jetson-nano-2gb-devkit-alpine-node:11-build not found: manifest unknown: manifest unknown
+[Info]     Built on arm05
+[Error]    Not deploying release.
+Remote build failed
+4- Run Npm install to install required packages 
+5- I try this with RPI-4 it works with it but not with jetson nano 
+6- adding Env varibles becuase without adding it RPI service not start successfuly
+to find Enviroment Varibles you need to clieck on Applications(left side of window) Then select the application/device, after doinf that you see Enviroment varibles 
+on left side of window
+7- testing message sending and receving and checked it on console of RPI balena OS 
+(https://console.cloud.google.com/cloudpubsub/subscription/detail/balena-telemetry-test-sub?project=cobalt-catalyst-263401&modal=pullmessages)
+
+ADDING REPO TO GITHUB: 
+1- Removing NPM packages becuase it ll install again by single command(npm install)
+2- add repo using git commands to https://github.com/rambodc/NanoBalena.git
